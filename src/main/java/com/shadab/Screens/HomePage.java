@@ -57,8 +57,13 @@ public class HomePage {
         frame.setDefaultCloseOperation(3);
         frame.add(textField);
         frame.add(button);
+        frame.add(new Fullname());
+        frame.add(new Posts());
+        frame.add(new Followers());
+        frame.add(new Following());
         frame.setLayout(null);
         frame.setVisible(true);
+
 
     }
 
