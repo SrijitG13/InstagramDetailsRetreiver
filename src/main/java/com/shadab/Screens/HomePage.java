@@ -22,7 +22,8 @@ public class HomePage {
         textField.setText("shadabdsw");
         textField.setBounds(150, 50, 380, 40);
         textField.setFont(new Font("Aerial", Font.PLAIN, 20));
-        // textField.setBorder(BorderFactory.createMatteBorder(0, 0, 2, 0, Color.white));
+        // textField.setBorder(BorderFactory.createMatteBorder(0, 0, 2, 0,
+        // Color.white));
         textField.setBackground(Color.white);
         textField.setForeground(Color.black);
         textField.setLayout(null);
@@ -39,7 +40,10 @@ public class HomePage {
         button.addActionListener(e -> {
             String username = textField.getText();
             try {
-                JSONObject obj = new service().get("https://www.instagram.com/" + username + "/?__a=1");
+                // JSONObject obj = new service().get("https://www.instagram.com/" + username +
+                // "/?__a=1");
+                JSONObject obj = new service().get("https://api.github.com/users/" + username);
+
                 frame.add(new ShowImage(obj));
                 frame.repaint();
             } catch (IOException e1) {
